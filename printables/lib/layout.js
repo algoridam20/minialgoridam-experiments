@@ -2,17 +2,26 @@ import { tokens as t } from "./tokens.js";
 
 export function layoutStyles() {
   return `
-  @page { size: A4 portrait; margin: 0; }
+  @page { size: A4 portrait; margin: 0; background: white; }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: white;
+    font-family: ${t.font.family};
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
   body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: ${t.colors.screenBg};
-    font-family: ${t.font.family};
+  }
+
+  @media screen {
+    body { background: ${t.colors.screenBg}; }
   }
 
   .page {
@@ -51,7 +60,8 @@ export function layoutStyles() {
     border-radius: ${t.border.radius};
     position: absolute;
     overflow: hidden;
-    background-image: radial-gradient(${t.dotGrid.color} ${t.dotGrid.dot}, transparent ${t.dotGrid.dot});
+    background-color: ${t.colors.cardBg};
+    background-image: radial-gradient(${t.dotGrid.color} ${t.dotGrid.dot}, ${t.colors.cardBg} ${t.dotGrid.dot});
     background-size: ${t.dotGrid.size} ${t.dotGrid.size};
     background-position: ${t.dotGrid.originX} ${t.dotGrid.originY};
     -webkit-print-color-adjust: exact;
@@ -64,7 +74,7 @@ export function layoutStyles() {
   .card--br { bottom: ${t.sheetMargin.y}; right: ${t.sheetMargin.x}; }
 
   @media print {
-    body { background: none; }
+    html, body { background: white !important; }
   }
 `;
 }
