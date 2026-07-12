@@ -1,9 +1,14 @@
+const line = "1px solid";
+
 export const tokens = {
   paper: { width: "210mm", height: "297mm" },
   quadrant: { width: "105mm", height: "148.5mm" },
   card: { width: "102mm", height: "145mm" },
-  cutGap: "2.5mm",
-  sheetMargin: { top: "1mm", side: "0.5mm" },
+  lineWidth: "1px",
+  svgStrokeWidth: "0.35",
+  // Centered in each quadrant: (quadrant − card) / 2
+  sheetMargin: { x: "1.5mm", y: "1.75mm" },
+  cutGap: "1.5mm",
   padding: { x: "8mm", y: "7mm" },
   dotGrid: {
     size: "3.8mm",
@@ -13,13 +18,12 @@ export const tokens = {
     originY: "7mm",
   },
   border: {
-    card: "1.4px solid #111",
-    frame: "1.2px solid #111",
-    grid: "0.75px solid #e0e0e0",
-    gridStrong: "1.5px solid #111",
-    divider: "1px solid #333",
-    radius: "2mm",
-    radiusSm: "1mm",
+    card: `${line} #111`,
+    frame: `${line} #111`,
+    grid: `${line} #e0e0e0`,
+    gridStrong: `${line} #111`,
+    divider: `${line} #333`,
+    radius: "0.5mm",
   },
   colors: {
     ink: "#111",
@@ -38,6 +42,6 @@ export const tokens = {
   font: {
     family: "Arial, sans-serif",
     label: "8pt",
-    date: "3.6pt",
+    date: "3pt",
   },
 };

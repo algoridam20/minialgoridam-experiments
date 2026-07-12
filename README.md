@@ -46,7 +46,7 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 |---|---|---|
 | Paper | A4 (210 × 297 mm) | Print sheet |
 | Card | 102 × 145 mm | ~1.5 mm paste margin per side in A6 notebook |
-| Cut gap | 2.5 mm | Space between card border and dotted cut guide |
+| Cut gap | 1.5 mm | Space between card border and dotted cut guide (cards centered in each quadrant) |
 | Dot grid | 3.8 mm spacing | On each card, aligned to inner padding |
 
 ## Adding a printable

@@ -43,7 +43,7 @@ export function blockStyles() {
   }
 
   .field {
-    border-bottom: 1px solid ${t.colors.fieldLine};
+    border-bottom: ${t.lineWidth} solid ${t.colors.fieldLine};
     height: 4mm;
   }
 
@@ -59,7 +59,7 @@ export function blockStyles() {
   .progress-square {
     width: ${t.progressSquare.size};
     height: ${t.progressSquare.size};
-    border: 1px solid ${t.colors.ink};
+    border: ${t.border.card};
   }
 
   .write-area {
@@ -79,18 +79,21 @@ export function blockStyles() {
     display: grid;
     grid-template-columns: repeat(31, ${t.dateCell.size});
     border: ${t.border.frame};
-    border-radius: ${t.border.radiusSm};
+    border-radius: ${t.border.radius};
     background: ${t.colors.headerBg};
     overflow: hidden;
   }
 
   .date-cell {
-    border-right: 0.5px solid ${t.colors.gridLineLight};
+    border-right: ${t.lineWidth} solid ${t.colors.gridLineLight};
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: ${t.font.date};
     font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
     color: ${t.colors.inkMuted};
   }
 
@@ -106,14 +109,14 @@ export function blockStyles() {
     grid-template-columns: repeat(20, ${t.cell.size});
     grid-template-rows: repeat(31, ${t.cell.size});
     border: ${t.border.gridStrong};
-    border-radius: ${t.border.radiusSm};
+    border-radius: ${t.border.radius};
     overflow: hidden;
     background: #fff;
   }
 
   .habit-cell {
     border-right: ${t.border.grid};
-    border-bottom: 0.75px solid ${t.colors.gridLineMid};
+    border-bottom: ${t.lineWidth} solid ${t.colors.gridLineMid};
   }
 
   .habit-cell:nth-child(20n) { border-right: none; }
@@ -159,7 +162,7 @@ export function slantedLines(count, { gridTop = 12, gridRows = 31 } = {}) {
   const lines = Array.from({ length: count + 1 }, (_, i) => {
     const x1 = (i * cellW).toFixed(3);
     const x2 = (i * cellW - angleOffset).toFixed(3);
-    return `<line x1="${x1}" y1="0" x2="${x2}" y2="${yEnd}" stroke="${t.colors.ink}" stroke-width="0.3"/>`;
+    return `<line x1="${x1}" y1="0" x2="${x2}" y2="${yEnd}" stroke="${t.colors.ink}" stroke-width="${t.svgStrokeWidth}"/>`;
   }).join("");
 
   return `<div class="slanted-headers" style="left: ${centerLeft(width)}; width: ${width}mm; top: ${top}mm;">
