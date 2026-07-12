@@ -35,9 +35,10 @@ export const tokens = {
     fieldLine: "#444",
     cutGuide: "#888",
     screenBg: "#ececec",
+    cardBg: "#fff",
   },
   cell: { size: "3.8mm" },
-  dateCell: { size: "2.375mm" },
+  dateCell: { size: "2.45" },
   progressSquare: { size: "5mm", gap: "1.2mm" },
   font: {
     family: "Arial, sans-serif",

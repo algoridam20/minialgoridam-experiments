@@ -73,15 +73,17 @@ export function blockStyles() {
   .date-row {
     position: absolute;
     top: 8mm;
-    left: ${centerLeft(31 * 2.375)};
-    width: ${31 * 2.375}mm;
-    height: ${t.dateCell.size};
+    left: 12.895mm;
+    width: ${31 * t.dateCell.size + 0.26}mm;
+    height: ${t.dateCell.size}mm;
     display: grid;
-    grid-template-columns: repeat(31, ${t.dateCell.size});
+    grid-template-columns: repeat(31, ${t.dateCell.size}mm);
     border: ${t.border.frame};
     border-radius: ${t.border.radius};
     background: ${t.colors.headerBg};
     overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .date-cell {
