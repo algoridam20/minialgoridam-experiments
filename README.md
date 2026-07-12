@@ -45,8 +45,9 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Token | Value | Purpose |
 |---|---|---|
 | Paper | A4 (210 × 297 mm) | Print sheet |
-| Card | 102 × 145 mm | ~1.5 mm paste margin per side in A6 notebook |
-| Cut gap | 1.5 mm | Space between card border and dotted cut guide (cards centered in each quadrant) |
+| Card | 90 × 145 mm | Fits Leuchtturm1917 A6 Pocket (90 × 150 mm) |
+| Sheet margin | 7.5 mm | Card placement margin within each A4 quadrant |
+| Card cut outline | 2 mm | Dotted trim guide outside each card border |
 | Dot grid | 3.8 mm spacing | On each card, aligned to inner padding |
 
 ## Adding a printable
@@ -80,7 +81,7 @@ export default {
 
 | Block | Description |
 |---|---|
-| `a4sheet(content)` | 4× card on A4 with cut guides |
+| `a4sheet(content)` | 4× card on A4 with per-card cut outlines |
 | `cardInner(content, { flex })` | Padded inner area |
 | `dateRow(days)` | Numbered day crossoff row |
 | `grid(cols, rows)` | Square habit matrix |

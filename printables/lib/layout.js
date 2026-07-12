@@ -31,41 +31,32 @@ export function layoutStyles() {
     position: relative;
   }
 
-  .page::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    border-left: ${t.lineWidth} dotted ${t.colors.cutGuide};
-    pointer-events: none;
-    z-index: 10;
-  }
-
-  .page::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    border-top: ${t.lineWidth} dotted ${t.colors.cutGuide};
-    pointer-events: none;
-    z-index: 10;
-  }
-
   .card {
     width: ${t.card.width};
     height: ${t.card.height};
     border: ${t.border.card};
     border-radius: ${t.border.radius};
     position: absolute;
-    overflow: hidden;
+    overflow: visible;
     background-color: ${t.colors.cardBg};
     background-image: radial-gradient(${t.dotGrid.color} ${t.dotGrid.dot}, ${t.colors.cardBg} ${t.dotGrid.dot});
     background-size: ${t.dotGrid.size} ${t.dotGrid.size};
     background-position: ${t.dotGrid.originX} ${t.dotGrid.originY};
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -${t.cardCutOutline};
+    left: -${t.cardCutOutline};
+    right: -${t.cardCutOutline};
+    bottom: -${t.cardCutOutline};
+    border: ${t.lineWidth} dotted ${t.colors.cutGuide};
+    border-radius: ${t.border.radius};
+    pointer-events: none;
+    z-index: 5;
   }
 
   .card--tl { top: ${t.sheetMargin.y}; left: ${t.sheetMargin.x}; }

@@ -1,5 +1,10 @@
 import { a4sheet } from "../lib/layout.js";
-import { blockStyles, dateRow, grid, slantedLines } from "../lib/blocks.js";
+import {
+  blockStyles,
+  habitTrackerStyles,
+  dateRowWithLabels,
+  habitTracker,
+} from "../lib/blocks.js";
 import { printablePage } from "../lib/document.js";
 
 const COLS = 20;
@@ -10,10 +15,10 @@ export default {
   title: "Monthly Habit Tracker",
   category: "monthly",
   build() {
-    const card = dateRow(ROWS) + grid(COLS, ROWS) + slantedLines(COLS, { gridRows: ROWS });
+    const card = dateRowWithLabels(ROWS) + habitTracker(COLS, ROWS);
     return printablePage({
       title: this.title,
-      extraStyles: blockStyles(),
+      extraStyles: blockStyles() + habitTrackerStyles(COLS, ROWS),
       body: a4sheet(card),
     });
   },
