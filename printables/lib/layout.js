@@ -28,7 +28,7 @@ export function layoutStyles() {
     left: 50%;
     top: 0;
     bottom: 0;
-    border-left: 1px dotted ${t.colors.cutGuide};
+    border-left: ${t.lineWidth} dotted ${t.colors.cutGuide};
     pointer-events: none;
     z-index: 10;
   }
@@ -39,7 +39,7 @@ export function layoutStyles() {
     top: 50%;
     left: 0;
     right: 0;
-    border-top: 1px dotted ${t.colors.cutGuide};
+    border-top: ${t.lineWidth} dotted ${t.colors.cutGuide};
     pointer-events: none;
     z-index: 10;
   }
@@ -58,10 +58,10 @@ export function layoutStyles() {
     print-color-adjust: exact;
   }
 
-  .card--tl { top: ${t.sheetMargin.top}; left: ${t.sheetMargin.side}; }
-  .card--tr { top: ${t.sheetMargin.top}; right: ${t.sheetMargin.side}; }
-  .card--bl { bottom: ${t.sheetMargin.top}; left: ${t.sheetMargin.side}; }
-  .card--br { bottom: ${t.sheetMargin.top}; right: ${t.sheetMargin.side}; }
+  .card--tl { top: ${t.sheetMargin.y}; left: ${t.sheetMargin.x}; }
+  .card--tr { top: ${t.sheetMargin.y}; right: ${t.sheetMargin.x}; }
+  .card--bl { bottom: ${t.sheetMargin.y}; left: ${t.sheetMargin.x}; }
+  .card--br { bottom: ${t.sheetMargin.y}; right: ${t.sheetMargin.x}; }
 
   @media print {
     body { background: none; }
