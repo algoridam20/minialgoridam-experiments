@@ -4,8 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "public/**"
+      - "printables/**"
       - "scripts/**"
+      - "package.json"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -30,8 +31,8 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Generate index from HTML files
-        run: node scripts/generate-index.mjs
+      - name: Build printables
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
