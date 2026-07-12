@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Algoridam Experiments</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0f1115;
+        --panel: #171a21;
+        --text: #e8eaed;
+        --muted: #9aa0a6;
+        --accent: #7c9cff;
+        --border: #2a2f3a;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --panel: #ffffff;
+          --text: #1f2328;
+          --muted: #656d76;
+          --accent: #3558e6;
+          --border: #d8dee4;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background: radial-gradient(circle at top, #1a2030 0%, var(--bg) 45%);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem 4rem;
+      }
+
+      header {
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(2rem, 4vw, 2.75rem);
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      section {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.1rem;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        align-items: baseline;
+        padding: 0.65rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      li:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .path {
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.9rem;
+      }
+
+      .empty {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Mini Algoridam Experiments</h1>
+        <p class="subtitle">
+          Static HTML experiments published from this repository.
+        </p>
+      </header>
+
+      <!-- GENERATED_PAGES_START -->
+    <section>
+      <h2>Examples</h2>
+      <ul>
+        <li><a href="./examples/binary-search.html">Binary Search</a><span class="path">examples/binary-search.html</span></li>
+        <li><a href="./examples/hello-world.html">Hello World</a><span class="path">examples/hello-world.html</span></li>
+      </ul>
+    </section>
+    <!-- GENERATED_PAGES_END -->
+    </main>
+  </body>
+</html>
