@@ -1,0 +1,17 @@
+{
+  "siteTitle": "Printables",
+  "printables": [
+    {
+      "id": "habit-tracker",
+      "title": "Monthly Habit Tracker",
+      "category": "monthly",
+      "template": "habit-tracker.js"
+    },
+    {
+      "id": "multi-step-tracker",
+      "title": "Multi-Step Project Tracker",
+      "category": "daily",
+      "template": "multi-step-tracker.js"
+    }
+  ]
+}
