@@ -15,7 +15,7 @@
     },
     {
       "id": "monthly-calendar",
-      "title": "Monthly Calendar",
+      "title": "Monthly Calendar (Jul 2026–Apr 2027)",
       "category": "monthly",
       "template": "monthly-calendar.js"
     },

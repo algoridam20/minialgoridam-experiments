@@ -21,7 +21,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 | Daily | Staged Action Tracker | `printables/templates/staged-action-tracker.js` |
 | Monthly | Monthly Habit Tracker | `printables/templates/habit-tracker.js` |
 | Monthly | Spend Tracker | `printables/templates/spend-tracker.js` |
-| Monthly | Monthly Calendar | `printables/templates/monthly-calendar.js` |
+| Monthly | Monthly Calendar (Jul 2026–Apr 2027) | `printables/templates/monthly-calendar.js` |
 | Yearly | Goal Tracker | `printables/templates/goal-tracker.js` |
 
 ## Live site
@@ -177,15 +177,24 @@ Centered vertical bucket (70% card width) with 30 equal-height segments. Dotted 
 
 ### Monthly calendar
 
-Accurate Sunday-first grid for a configured month/year. **JULY 2026** label runs bottom-to-top along the left border (letters facing right); **S M T W T F S** row above the grid. In-month cells have hairline borders with dot grid showing through.
+Sunday-first grid with vertical month/year sidebar. One HTML file can contain **multiple A4 pages** (page break per sheet). Each sheet: top row = month N, bottom row = month N+1 (four A6 cards per month).
 
-Set `YEAR` and `MONTH` at the top of `printables/templates/monthly-calendar.js` before building.
+Set `RANGE` in `printables/templates/monthly-calendar.js` before building:
+
+```js
+const RANGE = {
+  from: { year: 2026, month: 7 },
+  to: { year: 2027, month: 4 },
+};
+```
 
 | Block | Description |
 |---|---|
+| `printableDocument({ pages })` | Multi-page HTML (`printables/lib/document.js`) |
 | `monthlyCalendar(year, month)` | Sidebar + weekday row + date grid |
 | `monthlyCalendarStyles()` | Styles for calendar layout |
-| `buildCalendarCells(year, month)` | 42-cell grid data (`printables/lib/calendar.js`) |
+| `monthPagePairs(fromY, fromM, toY, toM)` | Month pairs per A4 sheet |
+| `buildCalendarCells(year, month)` | 42-cell grid data |
 | `nextMonth(year, month)` | Following month (December → January next year) |
 
 ## GitHub Pages setup

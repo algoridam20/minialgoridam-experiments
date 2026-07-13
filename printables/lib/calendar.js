@@ -18,6 +18,34 @@ export function nextMonth(year, month) {
   return { year, month: month + 1 };
 }
 
+export function listMonths(fromYear, fromMonth, toYear, toMonth) {
+  const months = [];
+  let year = fromYear;
+  let month = fromMonth;
+
+  while (year < toYear || (year === toYear && month <= toMonth)) {
+    months.push({ year, month });
+    ({ year, month } = nextMonth(year, month));
+  }
+
+  return months;
+}
+
+/** Pairs months for A4 sheets (top row + bottom row). Odd final month is duplicated on both rows. */
+export function monthPagePairs(fromYear, fromMonth, toYear, toMonth) {
+  const months = listMonths(fromYear, fromMonth, toYear, toMonth);
+  const pairs = [];
+
+  for (let i = 0; i < months.length; i += 2) {
+    pairs.push({
+      primary: months[i],
+      secondary: months[i + 1] ?? months[i],
+    });
+  }
+
+  return pairs;
+}
+
 /** @returns {{ day: number | null, inMonth: boolean }[]} 42 cells, Sunday-first */
 export function buildCalendarCells(year, month) {
   const firstDay = new Date(year, month - 1, 1).getDay();
