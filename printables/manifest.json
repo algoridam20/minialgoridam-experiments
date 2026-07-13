@@ -14,6 +14,12 @@
       "template": "multi-step-tracker.js"
     },
     {
+      "id": "staged-action-tracker",
+      "title": "Staged Action Tracker",
+      "category": "daily",
+      "template": "staged-action-tracker.js"
+    },
+    {
       "id": "goal-tracker",
       "title": "Goal Tracker",
       "category": "yearly",
