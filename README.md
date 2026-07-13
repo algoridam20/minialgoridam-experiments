@@ -1,6 +1,6 @@
 # minialgoridam-experiments
 
-A6 printables for daily, monthly, and yearly use. Each printable is an A4 page with four identical cards and dotted cut guides.
+A6 printables for daily, monthly, and yearly use. Each printable is an A4 page with four A6 cards and dotted cut guides.
 
 **Edit `printables/`** → run **`npm run build`** → output lands in **`public/`** (generated; committed for GitHub Pages).
 
@@ -18,6 +18,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 | Category | Title | File |
 |---|---|---|
 | Daily | Multi-Step Project Tracker | `printables/templates/multi-step-tracker.js` |
+| Daily | Staged Action Tracker | `printables/templates/staged-action-tracker.js` |
 | Monthly | Monthly Habit Tracker | `printables/templates/habit-tracker.js` |
 | Yearly | Goal Tracker | `printables/templates/goal-tracker.js` |
 
@@ -26,6 +27,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 Hub: **https://algoridam20.github.io/minialgoridam-experiments/public/**
 
 - [Multi-Step Project Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/multi-step-tracker.html)
+- [Staged Action Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/staged-action-tracker.html)
 - [Monthly Habit Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/habit-tracker.html)
 - [Goal Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/goal-tracker.html)
 
@@ -39,6 +41,7 @@ printables/
   templates/            # one file per printable
     habit-tracker.js
     multi-step-tracker.js
+    staged-action-tracker.js
     goal-tracker.js
   manifest.json         # registry (id, title, category)
   hub.template.html     # GitHub Pages index styling
@@ -52,6 +55,7 @@ public/                 # GENERATED — run npm run build; committed for GitHub 
   printables/
     habit-tracker.html
     multi-step-tracker.html
+    staged-action-tracker.html
     goal-tracker.html
 ```
 
@@ -68,7 +72,9 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Line weight | 1 px | Borders, frames, dividers |
 | Corner radius | 0.5 mm | Cards, frames, progress bars |
 | Dot grid | 3.8 mm spacing | Background on each A6 card |
-| Tracker gap | 2 mm | Inner margins for multi-step and goal trackers |
+| Tracker gap | 2 mm | Uniform inner margins for list-based trackers |
+| Staged action (relaxed) | 8 items, 3 mm symbols | Left column (TL + BL); symbols top-right |
+| Staged action (dense) | 16 items, 2.5 mm symbols | Right column (TR + BR); symbols vertically centered |
 | Progress bar | 4 mm tall, 8 segments | 12.5% per segment |
 
 ## Adding a printable
@@ -107,7 +113,8 @@ export default {
 
 | Block | Description |
 |---|---|
-| `a4sheet(content)` | 4× card on A4 with per-card cut outlines |
+| `a4sheet(content)` | 4× identical card on A4 with per-card cut outlines |
+| `a4sheetVariants({ tl, tr, bl, br })` | 4× card with different content per quadrant |
 | `cardInner(content, { flex, className })` | Padded inner area |
 
 ### Habit tracker
@@ -132,6 +139,22 @@ export default {
 | `multiStepTrackerStyles()` | Styles for multi-step layout |
 | `goalTracker()` | Single goal card with why, milestones, and progress |
 | `goalTrackerStyles()` | Styles for goal layout |
+
+### Staged action tracker
+
+Each item is an inner card with a write line and three stage symbols (square → triangle → circle) on the right. One A4 sheet uses two densities via `a4sheetVariants`:
+
+| Quadrant | Layout |
+|---|---|
+| Top left, bottom left | Relaxed — 8 items per card |
+| Top right, bottom right | Dense — 16 items per card |
+
+| Block | Description |
+|---|---|
+| `stageSymbols()` | Square, triangle, circle (matching SVG stroke) |
+| `stagedActionItem()` | Inner card with write line and stage symbols |
+| `stagedActionTracker(count)` | Stack of staged action items |
+| `stagedActionTrackerStyles()` | Styles for staged action layout (relaxed + dense) |
 
 ## GitHub Pages setup
 

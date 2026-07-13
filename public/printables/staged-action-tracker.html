@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!-- GENERATED — do not edit. Source: printables/ -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staged Action Tracker</title>
+<style>
+
+  @page { size: A4 portrait; margin: 0; background: white; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: white;
+    font-family: Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  @media screen {
+    body { background: #ececec; }
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    position: relative;
+  }
+
+  .card {
+    width: 90mm;
+    height: 145mm;
+    border: 1px solid #111;
+    border-radius: 0.5mm;
+    position: absolute;
+    overflow: visible;
+    background-color: #fff;
+    background-image: radial-gradient(#d8d8d8 0.55px, #fff 0.55px);
+    background-size: 3.8mm 3.8mm;
+    background-position: 3.5mm 3mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -2mm;
+    left: -2mm;
+    right: -2mm;
+    bottom: -2mm;
+    border: 1px dotted #888;
+    border-radius: 0.5mm;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .card--tl { top: 1.75mm; left: 7.5mm; }
+  .card--tr { top: 1.75mm; right: 7.5mm; }
+  .card--bl { bottom: 1.75mm; left: 7.5mm; }
+  .card--br { bottom: 1.75mm; right: 7.5mm; }
+
+  @media print {
+    html, body { background: white !important; }
+  }
+
+
+  .card-inner {
+    position: absolute;
+    left: 5mm;
+    right: 5mm;
+    top: 3mm;
+    bottom: 3mm;
+  }
+
+  .card-inner--flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .card-inner--staged-action {
+    left: 2mm;
+    right: 2mm;
+    top: 2mm;
+    bottom: 2mm;
+  }
+
+  .staged-action-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .stage-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .stage-item {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 2mm;
+    border: 1px solid #111;
+    border-radius: 0.5mm;
+    padding: 2mm;
+    min-height: 0;
+    background: transparent;
+  }
+
+  .card-inner--staged-action-dense .stage-item {
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .stage-item-line {
+    flex: 1;
+    min-width: 0;
+    height: 3.5mm;
+    align-self: flex-start;
+  }
+
+  .card-inner--staged-action-dense .stage-item-line {
+    align-self: center;
+  }
+
+  .stage-symbols {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .card-inner--staged-action-dense .stage-symbols {
+    align-self: center;
+  }
+
+  .stage-symbol {
+    width: 3mm;
+    height: 3mm;
+    flex-shrink: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .stage-symbol svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .card-inner--staged-action-dense .stage-symbol {
+    width: 2.5mm;
+    height: 2.5mm;
+  }
+
+  .card-inner--staged-action-dense .stage-item-line {
+    height: 2.5mm;
+  }
+
+</style>
+</head>
+<body>
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--staged-action"><div class="staged-action-layout"><div class="stage-items"><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div></div></div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--staged-action card-inner--staged-action-dense"><div class="staged-action-layout"><div class="stage-items"><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div></div></div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--staged-action"><div class="staged-action-layout"><div class="stage-items"><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div></div></div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--staged-action card-inner--staged-action-dense"><div class="staged-action-layout"><div class="stage-items"><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div><div class="stage-item"><div class="stage-item-line"></div><div class="stage-symbols">
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><polygon points="6,1.5 10.5,10 1.5,10" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/></svg></div>
+    <div class="stage-symbol"><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="#111" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+  </div></div></div></div></div></div>
+</div>
+</body>
+</html>

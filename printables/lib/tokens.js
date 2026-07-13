@@ -19,6 +19,7 @@ export const tokens = {
   cardCutOutline: "2mm",
   padding: { x: "5mm", y: "3mm" },
   multiStep: { gap: "2mm" },
+  stagedAction: { itemsRelaxed: 8, itemsDense: 16, symbolSize: "3mm", symbolSizeDense: "2.5mm" },
   dotGrid: {
     size: "3.8mm",
     dot: "0.55px",

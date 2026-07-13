@@ -154,6 +154,101 @@ export function goalTrackerStyles() {
 `;
 }
 
+export function stagedActionTrackerStyles() {
+  const gap = t.multiStep.gap;
+  const symbol = t.stagedAction.symbolSize;
+  const symbolDense = t.stagedAction.symbolSizeDense;
+
+  return `
+  .card-inner--staged-action {
+    left: ${gap};
+    right: ${gap};
+    top: ${gap};
+    bottom: ${gap};
+  }
+
+  .staged-action-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .stage-items {
+    display: flex;
+    flex-direction: column;
+    gap: ${gap};
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .stage-item {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: ${gap};
+    border: ${t.border.frame};
+    border-radius: ${t.border.radius};
+    padding: ${gap};
+    min-height: 0;
+    background: transparent;
+  }
+
+  .card-inner--staged-action-dense .stage-item {
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .stage-item-line {
+    flex: 1;
+    min-width: 0;
+    height: 3.5mm;
+    align-self: flex-start;
+  }
+
+  .card-inner--staged-action-dense .stage-item-line {
+    align-self: center;
+  }
+
+  .stage-symbols {
+    display: flex;
+    align-items: center;
+    gap: ${gap};
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .card-inner--staged-action-dense .stage-symbols {
+    align-self: center;
+  }
+
+  .stage-symbol {
+    width: ${symbol};
+    height: ${symbol};
+    flex-shrink: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .stage-symbol svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .card-inner--staged-action-dense .stage-symbol {
+    width: ${symbolDense};
+    height: ${symbolDense};
+  }
+
+  .card-inner--staged-action-dense .stage-item-line {
+    height: 2.5mm;
+  }
+`;
+}
+
 function projectTrackerStyles(gap) {
   return `
   .tracker-card {
@@ -462,4 +557,32 @@ export function multiStepTracker(count = 3) {
 export function goalTracker() {
   const content = `${trackerHeaderRow({ titleLabel: "Goal", dateLabel: "Target" })}${trackerWhyRow()}${trackerMilestones(3)}${trackerList()}${progressBarContinuous()}`;
   return `<div class="goal-layout"><div class="tracker-card">${content}</div></div>`;
+}
+
+function stageSymbolSvg(shape) {
+  const stroke = t.colors.ink;
+  const attrs = `fill="none" stroke="${stroke}" stroke-width="1" vector-effect="non-scaling-stroke"`;
+  const shapes = {
+    square: `<rect x="1.5" y="1.5" width="9" height="9" ${attrs}/>`,
+    triangle: `<polygon points="6,1.5 10.5,10 1.5,10" ${attrs} stroke-linejoin="round"/>`,
+    circle: `<circle cx="6" cy="6" r="4.5" ${attrs}/>`,
+  };
+  return `<svg viewBox="0 0 12 12" aria-hidden="true">${shapes[shape]}</svg>`;
+}
+
+export function stageSymbols() {
+  return `<div class="stage-symbols">
+    <div class="stage-symbol">${stageSymbolSvg("square")}</div>
+    <div class="stage-symbol">${stageSymbolSvg("triangle")}</div>
+    <div class="stage-symbol">${stageSymbolSvg("circle")}</div>
+  </div>`;
+}
+
+export function stagedActionItem() {
+  return `<div class="stage-item"><div class="stage-item-line"></div>${stageSymbols()}</div>`;
+}
+
+export function stagedActionTracker(count = t.stagedAction.itemsRelaxed) {
+  const items = Array.from({ length: count }, () => stagedActionItem()).join("");
+  return `<div class="staged-action-layout"><div class="stage-items">${items}</div></div>`;
 }
