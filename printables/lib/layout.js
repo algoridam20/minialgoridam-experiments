@@ -76,7 +76,7 @@ export function a4sheet(cardInnerHtml) {
   return POSITIONS.map((pos) => `<div class="card card--${pos}">${cardInnerHtml}</div>`).join("\n");
 }
 
-export function cardInner(content, { flex = false } = {}) {
-  const cls = flex ? "card-inner card-inner--flex" : "card-inner";
+export function cardInner(content, { flex = false, className = "" } = {}) {
+  const cls = ["card-inner", flex && "card-inner--flex", className].filter(Boolean).join(" ");
   return `<div class="${cls}">${content}</div>`;
 }

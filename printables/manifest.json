@@ -12,6 +12,12 @@
       "title": "Multi-Step Project Tracker",
       "category": "daily",
       "template": "multi-step-tracker.js"
+    },
+    {
+      "id": "goal-tracker",
+      "title": "Goal Tracker",
+      "category": "yearly",
+      "template": "goal-tracker.js"
     }
   ]
 }
