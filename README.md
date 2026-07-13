@@ -20,6 +20,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 | Daily | Multi-Step Project Tracker | `printables/templates/multi-step-tracker.js` |
 | Daily | Staged Action Tracker | `printables/templates/staged-action-tracker.js` |
 | Monthly | Monthly Habit Tracker | `printables/templates/habit-tracker.js` |
+| Monthly | Spend Tracker | `printables/templates/spend-tracker.js` |
 | Yearly | Goal Tracker | `printables/templates/goal-tracker.js` |
 
 ## Live site
@@ -29,6 +30,7 @@ Hub: **https://algoridam20.github.io/minialgoridam-experiments/public/**
 - [Multi-Step Project Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/multi-step-tracker.html)
 - [Staged Action Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/staged-action-tracker.html)
 - [Monthly Habit Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/habit-tracker.html)
+- [Spend Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/spend-tracker.html)
 - [Goal Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/goal-tracker.html)
 
 Pages deploys from the `main` branch (legacy). Built HTML in `public/` is committed on each deploy. If an org admin switches Pages to **GitHub Actions**, drop the `/public` prefix (e.g. `/printables/goal-tracker.html`).
@@ -43,6 +45,7 @@ printables/
     multi-step-tracker.js
     staged-action-tracker.js
     goal-tracker.js
+    spend-tracker.js
   manifest.json         # registry (id, title, category)
   hub.template.html     # GitHub Pages index styling
 
@@ -57,6 +60,7 @@ public/                 # GENERATED — run npm run build; committed for GitHub 
     multi-step-tracker.html
     staged-action-tracker.html
     goal-tracker.html
+    spend-tracker.html
 ```
 
 ## Design tokens
@@ -75,6 +79,7 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Tracker gap | 2 mm | Uniform inner margins for list-based trackers |
 | Staged action (relaxed) | 8 items, 3 mm symbols | Left column (TL + BL); symbols top-right |
 | Staged action (dense) | 16 items, 2.5 mm symbols | Right column (TR + BR); symbols vertically centered |
+| Spend tracker | 30 segments, 70% width | Centered bucket; open top; dotted segment lines; 10 mm vertical margin |
 | Progress bar | 4 mm tall, 8 segments | 12.5% per segment |
 
 ## Adding a printable
@@ -155,6 +160,15 @@ Each item is an inner card with a write line and three stage symbols (square →
 | `stagedActionItem()` | Inner card with write line and stage symbols |
 | `stagedActionTracker(count)` | Stack of staged action items |
 | `stagedActionTrackerStyles()` | Styles for staged action layout (relaxed + dense) |
+
+### Spend tracker
+
+Centered vertical bucket (70% card width) with 30 equal-height segments. Dotted dividers between segments; open top (no top border — sides and bottom only). Shade bottom → top as the bucket fills. No labels or scale markers; 10 mm space above and below the bucket. Remaining card area (dot grid) is for handwritten notes.
+
+| Block | Description |
+|---|---|
+| `spendTracker()` | Centered vertical segmented bucket |
+| `spendTrackerStyles()` | Styles for spend tracker layout |
 
 ## GitHub Pages setup
 

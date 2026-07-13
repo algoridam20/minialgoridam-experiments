@@ -20,6 +20,7 @@ export const tokens = {
   padding: { x: "5mm", y: "3mm" },
   multiStep: { gap: "2mm" },
   stagedAction: { itemsRelaxed: 8, itemsDense: 16, symbolSize: "3mm", symbolSizeDense: "2.5mm" },
+  spendTracker: { segments: 30, bucketWidth: "70%", marginY: "10mm" },
   dotGrid: {
     size: "3.8mm",
     dot: "0.55px",

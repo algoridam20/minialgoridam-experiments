@@ -8,6 +8,12 @@
       "template": "habit-tracker.js"
     },
     {
+      "id": "spend-tracker",
+      "title": "Spend Tracker",
+      "category": "monthly",
+      "template": "spend-tracker.js"
+    },
+    {
       "id": "multi-step-tracker",
       "title": "Multi-Step Project Tracker",
       "category": "daily",
