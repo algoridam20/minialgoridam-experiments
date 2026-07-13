@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- GENERATED — do not edit. Source: printables/ -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Step Project Tracker</title>
+<style>
+
+  @page { size: A4 portrait; margin: 0; background: white; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: white;
+    font-family: Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  @media screen {
+    body { background: #ececec; }
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    position: relative;
+  }
+
+  .card {
+    width: 90mm;
+    height: 145mm;
+    border: 1px solid #111;
+    border-radius: 0.5mm;
+    position: absolute;
+    overflow: visible;
+    background-color: #fff;
+    background-image: radial-gradient(#d8d8d8 0.55px, #fff 0.55px);
+    background-size: 3.8mm 3.8mm;
+    background-position: 3.5mm 3mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -2mm;
+    left: -2mm;
+    right: -2mm;
+    bottom: -2mm;
+    border: 1px dotted #888;
+    border-radius: 0.5mm;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .card--tl { top: 1.75mm; left: 7.5mm; }
+  .card--tr { top: 1.75mm; right: 7.5mm; }
+  .card--bl { bottom: 1.75mm; left: 7.5mm; }
+  .card--br { bottom: 1.75mm; right: 7.5mm; }
+
+  @media print {
+    html, body { background: white !important; }
+  }
+
+
+  .card-inner {
+    position: absolute;
+    left: 5mm;
+    right: 5mm;
+    top: 3mm;
+    bottom: 3mm;
+  }
+
+  .card-inner--flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section {
+    flex: 1;
+    position: relative;
+  }
+
+  .section:not(:last-child) {
+    border-bottom: 1px solid #333;
+    margin-bottom: 3mm;
+    padding-bottom: 3mm;
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3mm;
+    font-size: 8pt;
+  }
+
+  .field {
+    border-bottom: 1px solid #444;
+    height: 4mm;
+  }
+
+  .field--title { width: 60%; }
+  .field--date { width: 26%; }
+
+  .progress-bar {
+    display: flex;
+    gap: 1.2mm;
+    margin-bottom: 4mm;
+  }
+
+  .progress-square {
+    width: 5mm;
+    height: 5mm;
+    border: 1px solid #111;
+  }
+
+  .write-area {
+    position: absolute;
+    top: 18mm;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+</style>
+</head>
+<body>
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
+</div>
+</body>
+</html>
