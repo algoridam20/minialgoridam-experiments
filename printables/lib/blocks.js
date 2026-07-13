@@ -586,3 +586,72 @@ export function stagedActionTracker(count = t.stagedAction.itemsRelaxed) {
   const items = Array.from({ length: count }, () => stagedActionItem()).join("");
   return `<div class="staged-action-layout"><div class="stage-items">${items}</div></div>`;
 }
+
+function spendSegments(count) {
+  const items = Array.from({ length: count }, () => `<div class="spend-segment"></div>`).join("");
+  return `<div class="spend-segments">${items}</div>`;
+}
+
+export function spendTrackerStyles() {
+  const { segments, bucketWidth, marginY } = t.spendTracker;
+
+  return `
+  .card-inner--spend {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: ${marginY};
+    padding-bottom: ${marginY};
+  }
+
+  .spend-tracker-layout {
+    width: ${bucketWidth};
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spend-bucket {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spend-segments {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: repeat(${segments}, minmax(0, 1fr));
+    border-left: ${t.border.card};
+    border-right: ${t.border.card};
+    border-bottom: ${t.border.card};
+    border-top: none;
+    border-radius: 0 0 ${t.border.radius} ${t.border.radius};
+    overflow: hidden;
+    background: ${t.colors.cardBg};
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .spend-segment {
+    min-height: 0;
+  }
+
+  .spend-segment:not(:first-child) {
+    border-top: ${t.lineWidth} dotted ${t.colors.cutGuide};
+  }
+`;
+}
+
+export function spendTracker() {
+  const { segments } = t.spendTracker;
+  return `<div class="spend-tracker-layout">
+    <div class="spend-bucket">${spendSegments(segments)}</div>
+  </div>`;
+}
