@@ -87,61 +87,208 @@
     flex-direction: column;
   }
 
-  .section {
+
+  .card-inner--multi-step {
+    left: 2mm;
+    right: 2mm;
+    top: 2mm;
+    bottom: 2mm;
+  }
+
+  .multi-step-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2mm;
+    height: 100%;
+  }
+
+  
+  .tracker-card {
     flex: 1;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: 1px solid #111;
+    border-radius: 0.5mm;
+    padding: 2mm;
+    background: transparent;
   }
 
-  .section:not(:last-child) {
-    border-bottom: 1px solid #333;
-    margin-bottom: 3mm;
-    padding-bottom: 3mm;
-  }
-
-  .header-row {
+  .tracker-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 3mm;
+    gap: 2mm;
+    margin-bottom: 2mm;
     font-size: 8pt;
+    flex-shrink: 0;
   }
 
-  .field {
-    border-bottom: 1px solid #444;
-    height: 4mm;
-  }
-
-  .field--title { width: 60%; }
-  .field--date { width: 26%; }
-
-  .progress-bar {
+  .tracker-field {
     display: flex;
-    gap: 1.2mm;
-    margin-bottom: 4mm;
+    flex-direction: column;
+    gap: 0.5mm;
   }
 
-  .progress-square {
-    width: 5mm;
-    height: 5mm;
+  .tracker-field--title { flex: 1; min-width: 0; }
+  .tracker-field--nbd { width: 22mm; flex-shrink: 0; }
+
+  .tracker-label {
+    font-size: 3pt;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .tracker-field-line {
+    border-bottom: 1px solid #444;
+    height: 3.5mm;
+  }
+
+  .tracker-list {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .progress-bar--continuous {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    height: 4mm;
     border: 1px solid #111;
+    border-radius: 0.5mm;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: 2mm;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  .write-area {
-    position: absolute;
-    top: 18mm;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  .progress-segment {
+    border-right: 1px dotted #888;
   }
+
+  .progress-segment:last-child { border-right: none; }
+
 
 </style>
 </head>
 <body>
 <div class="page">
-<div class="card card--tl"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
-<div class="card card--tr"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
-<div class="card card--bl"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
-<div class="card card--br"><div class="card-inner card-inner--flex"><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div><div class="section section--last" style="border-bottom:none;padding-bottom:0;margin-bottom:0;"><div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div><div class="progress-bar"><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div><div class="progress-square"></div></div><div class="write-area"></div></div></div></div>
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--multi-step"><div class="multi-step-layout"><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div></div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--multi-step"><div class="multi-step-layout"><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div></div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--multi-step"><div class="multi-step-layout"><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div></div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--multi-step"><div class="multi-step-layout"><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div><div class="tracker-card"><div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">Title</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">NBD</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div><div class="tracker-list"></div><div class="progress-bar--continuous"><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div><div class="progress-segment"></div></div></div></div></div></div>
 </div>
 </body>
 </html>

@@ -18,6 +18,7 @@ export const tokens = {
   cutGap: `${(quadrantW - cardW) / 2}mm`,
   cardCutOutline: "2mm",
   padding: { x: "5mm", y: "3mm" },
+  multiStep: { gap: "2mm" },
   dotGrid: {
     size: "3.8mm",
     dot: "0.55px",
@@ -49,6 +50,7 @@ export const tokens = {
   cell: { size: "3.8mm" },
   dateCell: { size: "2.45" },
   progressSquare: { size: "5mm", gap: "1.2mm" },
+  progressBar: { height: "4mm", segments: 8 },
   font: {
     family: "Arial, sans-serif",
     label: "8pt",

@@ -72,52 +72,158 @@ export function blockStyles() {
     flex-direction: column;
   }
 
-  .section {
+`;
+}
+
+export function multiStepTrackerStyles() {
+  const gap = t.multiStep.gap;
+
+  return `
+  .card-inner--multi-step {
+    left: ${gap};
+    right: ${gap};
+    top: ${gap};
+    bottom: ${gap};
+  }
+
+  .multi-step-layout {
+    display: flex;
+    flex-direction: column;
+    gap: ${gap};
+    height: 100%;
+  }
+
+  ${projectTrackerStyles(gap)}
+`;
+}
+
+export function goalTrackerStyles() {
+  const gap = t.multiStep.gap;
+
+  return `
+  .card-inner--goal {
+    left: ${gap};
+    right: ${gap};
+    top: ${gap};
+    bottom: ${gap};
+  }
+
+  .goal-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  ${projectTrackerStyles(gap)}
+
+  .tracker-why {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5mm;
+    margin-bottom: ${gap};
+    flex-shrink: 0;
+  }
+
+  .tracker-milestones {
+    display: flex;
+    flex-direction: column;
+    gap: ${gap};
+    margin-bottom: ${gap};
+    flex-shrink: 0;
+  }
+
+  .tracker-milestone {
+    display: flex;
+    align-items: center;
+    gap: ${gap};
+  }
+
+  .tracker-milestone-check {
+    width: 3mm;
+    height: 3mm;
+    border: ${t.border.card};
+    border-radius: ${t.border.radius};
+    flex-shrink: 0;
+  }
+
+  .tracker-milestone-line {
     flex: 1;
-    position: relative;
+    border-bottom: ${t.lineWidth} solid ${t.colors.fieldLine};
+    height: 3.5mm;
+  }
+`;
+}
+
+function projectTrackerStyles(gap) {
+  return `
+  .tracker-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: ${t.border.frame};
+    border-radius: ${t.border.radius};
+    padding: ${gap};
+    background: transparent;
   }
 
-  .section:not(:last-child) {
-    border-bottom: ${t.border.divider};
-    margin-bottom: 3mm;
-    padding-bottom: 3mm;
-  }
-
-  .header-row {
+  .tracker-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 3mm;
+    gap: ${gap};
+    margin-bottom: ${gap};
     font-size: ${t.font.label};
+    flex-shrink: 0;
   }
 
-  .field {
-    border-bottom: ${t.lineWidth} solid ${t.colors.fieldLine};
-    height: 4mm;
-  }
-
-  .field--title { width: 60%; }
-  .field--date { width: 26%; }
-
-  .progress-bar {
+  .tracker-field {
     display: flex;
-    gap: ${t.progressSquare.gap};
-    margin-bottom: 4mm;
+    flex-direction: column;
+    gap: 0.5mm;
   }
 
-  .progress-square {
-    width: ${t.progressSquare.size};
-    height: ${t.progressSquare.size};
+  .tracker-field--title { flex: 1; min-width: 0; }
+  .tracker-field--nbd { width: 22mm; flex-shrink: 0; }
+
+  .tracker-label {
+    font-size: ${t.font.date};
+    font-weight: bold;
+    color: ${t.colors.inkMuted};
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .tracker-field-line {
+    border-bottom: ${t.lineWidth} solid ${t.colors.fieldLine};
+    height: 3.5mm;
+  }
+
+  .tracker-list {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .progress-bar--continuous {
+    display: grid;
+    grid-template-columns: repeat(${t.progressBar.segments}, 1fr);
+    height: ${t.progressBar.height};
     border: ${t.border.card};
+    border-radius: ${t.border.radius};
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: ${gap};
+    background: ${t.colors.cardBg};
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  .write-area {
-    position: absolute;
-    top: 18mm;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  .progress-segment {
+    border-right: ${t.lineWidth} dotted ${t.colors.cutGuide};
   }
+
+  .progress-segment:last-child { border-right: none; }
 `;
 }
 
@@ -307,25 +413,53 @@ export function dateRow(days = 31) {
   return `<div class="date-row">${cells}</div>`;
 }
 
-export function headerRow() {
-  return `<div class="header-row"><div class="field field--title"></div><div class="field field--date"></div></div>`;
+export function trackerHeaderRow({ titleLabel = "Title", dateLabel = "NBD" } = {}) {
+  return `<div class="tracker-header">
+    <div class="tracker-field tracker-field--title">
+      <span class="tracker-label">${titleLabel}</span>
+      <div class="tracker-field-line"></div>
+    </div>
+    <div class="tracker-field tracker-field--nbd">
+      <span class="tracker-label">${dateLabel}</span>
+      <div class="tracker-field-line"></div>
+    </div>
+  </div>`;
 }
 
-export function progressBar(squares = 8) {
-  const items = Array.from({ length: squares }, () => `<div class="progress-square"></div>`).join("");
-  return `<div class="progress-bar">${items}</div>`;
+export function trackerWhyRow() {
+  return `<div class="tracker-why">
+    <span class="tracker-label">Why</span>
+    <div class="tracker-field-line"></div>
+  </div>`;
 }
 
-export function writeArea() {
-  return `<div class="write-area"></div>`;
+export function trackerMilestones(count = 3) {
+  const items = Array.from(
+    { length: count },
+    () => `<div class="tracker-milestone"><div class="tracker-milestone-check"></div><div class="tracker-milestone-line"></div></div>`
+  ).join("");
+  return `<div class="tracker-milestones">${items}</div>`;
 }
 
-export function section(content, { last = false } = {}) {
-  const cls = last ? "section section--last" : "section";
-  const style = last ? ' style="border-bottom:none;padding-bottom:0;margin-bottom:0;"' : "";
-  return `<div class="${cls}"${style}>${content}</div>`;
+export function progressBarContinuous(segments = t.progressBar.segments) {
+  const items = Array.from({ length: segments }, () => `<div class="progress-segment"></div>`).join("");
+  return `<div class="progress-bar--continuous">${items}</div>`;
 }
 
-export function multiStepSection(last = false) {
-  return section(`${headerRow()}${progressBar(8)}${writeArea()}`, { last });
+export function trackerList() {
+  return `<div class="tracker-list"></div>`;
+}
+
+export function trackerCard() {
+  return `<div class="tracker-card">${trackerHeaderRow()}${trackerList()}${progressBarContinuous()}</div>`;
+}
+
+export function multiStepTracker(count = 3) {
+  const cards = Array.from({ length: count }, () => trackerCard()).join("");
+  return `<div class="multi-step-layout">${cards}</div>`;
+}
+
+export function goalTracker() {
+  const content = `${trackerHeaderRow({ titleLabel: "Goal", dateLabel: "Target" })}${trackerWhyRow()}${trackerMilestones(3)}${trackerList()}${progressBarContinuous()}`;
+  return `<div class="goal-layout"><div class="tracker-card">${content}</div></div>`;
 }
