@@ -15,9 +15,14 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 
 ## Live site
 
-After GitHub Pages is enabled (Settings → Pages → Source: GitHub Actions):
+**https://algoridam20.github.io/minialgoridam-experiments/public/**
 
-**https://algoridam20.github.io/minialgoridam-experiments/**
+Printables:
+
+- [Habit tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/habit-tracker.html)
+- [Multi-step tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/multi-step-tracker.html)
+
+Pages currently deploys from the `main` branch (legacy). Built HTML in `public/` is committed on each deploy so printables are available at the URLs above. If an org admin switches Pages to **GitHub Actions**, drop the `/public` prefix (e.g. `/printables/habit-tracker.html`).
 
 ## Repository layout
 
@@ -31,7 +36,8 @@ printables/
 scripts/
   build.mjs             # manifest → public/
 
-public/                 # GENERATED — gitignored
+public/                 # GENERATED — run npm run build; committed for GitHub Pages
+  .nojekyll
   index.html
   printables/
     habit-tracker.html
@@ -91,10 +97,8 @@ export default {
 | `writeArea()` | Blank writing space |
 | `multiStepSection(last?)` | Full project-tracker section |
 
-## GitHub Pages setup (one-time)
+## GitHub Pages setup
 
-1. Push to GitHub
-2. **Settings → Pages → Source: GitHub Actions**
-3. Push to `main` or run the deploy workflow manually
+The deploy workflow runs `npm run build` on pushes to `main` and commits the output to `public/`. With legacy branch deploy (current), the site is served from `main` at `/public/…`.
 
-The workflow runs `npm run build` before every deploy.
+Optional: an org admin can switch **Settings → Pages → Source** to **GitHub Actions** so the workflow artifact is served from the site root instead.

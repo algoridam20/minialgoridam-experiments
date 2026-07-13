@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,6 +33,14 @@ jobs:
 
       - name: Build printables
         run: npm run build
+
+      - name: Commit built printables for legacy Pages
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/
+          git diff --staged --quiet || (git commit -m "chore: rebuild printables" && git push)
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
