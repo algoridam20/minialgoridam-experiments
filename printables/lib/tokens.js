@@ -21,6 +21,14 @@ export const tokens = {
   multiStep: { gap: "2mm" },
   stagedAction: { itemsRelaxed: 8, itemsDense: 16, symbolSize: "3mm", symbolSizeDense: "2.5mm" },
   spendTracker: { segments: 30, bucketWidth: "70%", marginY: "10mm" },
+  calendar: {
+    weeks: 6,
+    sidebarWidth: "7mm",
+    sidebarFont: "8pt",
+    dayFont: "5pt",
+    weekdayFont: "3pt",
+    dateHairline: "0.5px",
+  },
   dotGrid: {
     size: "3.8mm",
     dot: "0.55px",
@@ -46,6 +54,7 @@ export const tokens = {
     columnStripe: "#f5f5f5",
     fieldLine: "#444",
     cutGuide: "#888",
+    calendarDateBorder: "#a9a9a9",
     screenBg: "#ececec",
     cardBg: "#fff",
   },

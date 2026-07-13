@@ -14,6 +14,12 @@
       "template": "spend-tracker.js"
     },
     {
+      "id": "monthly-calendar",
+      "title": "Monthly Calendar (Jul 2026–Apr 2027)",
+      "category": "monthly",
+      "template": "monthly-calendar.js"
+    },
+    {
       "id": "multi-step-tracker",
       "title": "Multi-Step Project Tracker",
       "category": "daily",

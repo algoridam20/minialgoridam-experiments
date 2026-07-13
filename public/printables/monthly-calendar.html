@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!-- GENERATED — do not edit. Source: printables/ -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>July 2026 – April 2027</title>
+<style>
+
+  @page { size: A4 portrait; margin: 0; background: white; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: white;
+    font-family: Arial, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  @media screen {
+    body { background: #ececec; }
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    position: relative;
+  }
+
+  .card {
+    width: 90mm;
+    height: 145mm;
+    border: 1px solid #111;
+    border-radius: 0.5mm;
+    position: absolute;
+    overflow: visible;
+    background-color: #fff;
+    background-image: radial-gradient(#d8d8d8 0.55px, #fff 0.55px);
+    background-size: 3.8mm 3.8mm;
+    background-position: 3.5mm 3mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -2mm;
+    left: -2mm;
+    right: -2mm;
+    bottom: -2mm;
+    border: 1px dotted #888;
+    border-radius: 0.5mm;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .card--tl { top: 1.75mm; left: 7.5mm; }
+  .card--tr { top: 1.75mm; right: 7.5mm; }
+  .card--bl { bottom: 1.75mm; left: 7.5mm; }
+  .card--br { bottom: 1.75mm; right: 7.5mm; }
+
+  @media print {
+    html, body { background: white !important; }
+  }
+
+  body.pages {
+    flex-direction: column;
+    align-items: center;
+    gap: 12mm;
+    padding: 12mm 0;
+  }
+
+  @media print {
+    body.pages {
+      gap: 0;
+      padding: 0;
+    }
+  }
+
+  .page + .page {
+    break-before: page;
+    page-break-before: always;
+  }
+
+
+  .card-inner {
+    position: absolute;
+    left: 5mm;
+    right: 5mm;
+    top: 3mm;
+    bottom: 3mm;
+  }
+
+  .card-inner--flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .card-inner--calendar {
+    left: 2mm;
+    right: 2mm;
+    top: 2mm;
+    bottom: 2mm;
+  }
+
+  .calendar-layout {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    gap: 1.5mm;
+  }
+
+  .calendar-sidebar {
+    width: 7mm;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .calendar-sidebar-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 8pt;
+    font-weight: bold;
+    line-height: 1;
+    color: #333;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .calendar-main {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    flex-shrink: 0;
+    padding-bottom: 1mm;
+    font-size: 3pt;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .calendar-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+
+  .calendar-cell {
+    position: relative;
+    min-height: 0;
+  }
+
+  .calendar-cell--date {
+    border-radius: 0.5mm;
+    box-shadow: inset 0 0 0 0.5px #a9a9a9;
+    background: transparent;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .calendar-day {
+    position: absolute;
+    top: 0.6mm;
+    left: 0.6mm;
+    font-size: 5pt;
+    font-weight: bold;
+    line-height: 1;
+    color: #333;
+    font-variant-numeric: tabular-nums;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+</style>
+</head>
+<body class="pages">
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">July 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">July 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">August 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">August 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+</div>
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">September 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">September 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">October 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">October 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+</div>
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">November 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">November 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">December 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">December 2026</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+</div>
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">January 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">January 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">February 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">February 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+</div>
+<div class="page">
+<div class="card card--tl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">March 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--tr"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">March 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">31</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--bl"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">April 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+<div class="card card--br"><div class="card-inner card-inner--flex card-inner--calendar"><div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">April 2027</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+      <div class="calendar-grid"><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">1</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">2</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">3</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">4</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">5</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">6</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">7</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">8</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">9</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">10</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">11</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">12</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">13</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">14</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">15</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">16</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">17</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">18</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">19</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">20</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">21</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">22</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">23</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">24</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">25</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">26</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">27</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">28</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">29</span></div><div class="calendar-cell calendar-cell--date"><span class="calendar-day">30</span></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div><div class="calendar-cell"></div></div>
+    </div>
+  </div></div></div>
+</div>
+</body>
+</html>

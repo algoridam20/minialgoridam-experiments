@@ -67,6 +67,25 @@ export function layoutStyles() {
   @media print {
     html, body { background: white !important; }
   }
+
+  body.pages {
+    flex-direction: column;
+    align-items: center;
+    gap: 12mm;
+    padding: 12mm 0;
+  }
+
+  @media print {
+    body.pages {
+      gap: 0;
+      padding: 0;
+    }
+  }
+
+  .page + .page {
+    break-before: page;
+    page-break-before: always;
+  }
 `;
 }
 

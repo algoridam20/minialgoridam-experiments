@@ -1,4 +1,5 @@
 import { tokens as t } from "./tokens.js";
+import { MONTH_NAMES, buildCalendarCells } from "./calendar.js";
 
 const SLANTED_H = 12;
 const LABEL_W = 4;
@@ -653,5 +654,131 @@ export function spendTracker() {
   const { segments } = t.spendTracker;
   return `<div class="spend-tracker-layout">
     <div class="spend-bucket">${spendSegments(segments)}</div>
+  </div>`;
+}
+
+const WEEKDAYS = ["S", "M", "T", "W", "T", "F", "S"];
+
+function calendarCell({ day, inMonth }) {
+  if (!inMonth) return `<div class="calendar-cell"></div>`;
+  return `<div class="calendar-cell calendar-cell--date"><span class="calendar-day">${day}</span></div>`;
+}
+
+export function monthlyCalendarStyles() {
+  const c = t.calendar;
+
+  return `
+  .card-inner--calendar {
+    left: 2mm;
+    right: 2mm;
+    top: 2mm;
+    bottom: 2mm;
+  }
+
+  .calendar-layout {
+    display: flex;
+    height: 100%;
+    min-height: 0;
+    gap: 1.5mm;
+  }
+
+  .calendar-sidebar {
+    width: ${c.sidebarWidth};
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .calendar-sidebar-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: ${c.sidebarFont};
+    font-weight: bold;
+    line-height: 1;
+    color: ${t.colors.inkMuted};
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .calendar-main {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    flex-shrink: 0;
+    padding-bottom: 1mm;
+    font-size: ${c.weekdayFont};
+    font-weight: bold;
+    color: ${t.colors.inkMuted};
+    text-align: center;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .calendar-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(${c.weeks}, minmax(0, 1fr));
+  }
+
+  .calendar-cell {
+    position: relative;
+    min-height: 0;
+  }
+
+  .calendar-cell--date {
+    border-radius: ${t.border.radius};
+    box-shadow: inset 0 0 0 ${c.dateHairline} ${t.colors.calendarDateBorder};
+    background: transparent;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .calendar-day {
+    position: absolute;
+    top: 0.6mm;
+    left: 0.6mm;
+    font-size: ${c.dayFont};
+    font-weight: bold;
+    line-height: 1;
+    color: ${t.colors.inkMuted};
+    font-variant-numeric: tabular-nums;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+`;
+}
+
+export function monthlyCalendar(year, month) {
+  const monthName = MONTH_NAMES[month - 1];
+  const cells = buildCalendarCells(year, month);
+  const weekdayRow = WEEKDAYS.map((d) => `<span>${d}</span>`).join("");
+  const grid = cells.map((cell) => calendarCell(cell)).join("");
+
+  return `<div class="calendar-layout">
+    <div class="calendar-sidebar">
+      <span class="calendar-sidebar-label">${monthName} ${year}</span>
+    </div>
+    <div class="calendar-main">
+      <div class="calendar-weekdays">${weekdayRow}</div>
+      <div class="calendar-grid">${grid}</div>
+    </div>
   </div>`;
 }

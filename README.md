@@ -21,6 +21,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 | Daily | Staged Action Tracker | `printables/templates/staged-action-tracker.js` |
 | Monthly | Monthly Habit Tracker | `printables/templates/habit-tracker.js` |
 | Monthly | Spend Tracker | `printables/templates/spend-tracker.js` |
+| Monthly | Monthly Calendar (Jul 2026–Apr 2027) | `printables/templates/monthly-calendar.js` |
 | Yearly | Goal Tracker | `printables/templates/goal-tracker.js` |
 
 ## Live site
@@ -31,6 +32,7 @@ Hub: **https://algoridam20.github.io/minialgoridam-experiments/public/**
 - [Staged Action Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/staged-action-tracker.html)
 - [Monthly Habit Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/habit-tracker.html)
 - [Spend Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/spend-tracker.html)
+- [Monthly Calendar](https://algoridam20.github.io/minialgoridam-experiments/public/printables/monthly-calendar.html)
 - [Goal Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/goal-tracker.html)
 
 Pages deploys from the `main` branch (legacy). Built HTML in `public/` is committed on each deploy. If an org admin switches Pages to **GitHub Actions**, drop the `/public` prefix (e.g. `/printables/goal-tracker.html`).
@@ -46,6 +48,7 @@ printables/
     staged-action-tracker.js
     goal-tracker.js
     spend-tracker.js
+    monthly-calendar.js
   manifest.json         # registry (id, title, category)
   hub.template.html     # GitHub Pages index styling
 
@@ -61,6 +64,7 @@ public/                 # GENERATED — run npm run build; committed for GitHub 
     staged-action-tracker.html
     goal-tracker.html
     spend-tracker.html
+    monthly-calendar.html
 ```
 
 ## Design tokens
@@ -80,6 +84,7 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Staged action (relaxed) | 8 items, 3 mm symbols | Left column (TL + BL); symbols top-right |
 | Staged action (dense) | 16 items, 2.5 mm symbols | Right column (TR + BR); symbols vertically centered |
 | Spend tracker | 30 segments, 70% width | Centered bucket; open top; dotted segment lines; 10 mm vertical margin |
+| Calendar | 6 weeks, hairline date borders | Vertical “JULY 2026” sidebar; S–S weekday row |
 | Progress bar | 4 mm tall, 8 segments | 12.5% per segment |
 
 ## Adding a printable
@@ -169,6 +174,28 @@ Centered vertical bucket (70% card width) with 30 equal-height segments. Dotted 
 |---|---|
 | `spendTracker()` | Centered vertical segmented bucket |
 | `spendTrackerStyles()` | Styles for spend tracker layout |
+
+### Monthly calendar
+
+Sunday-first grid with vertical month/year sidebar. One HTML file can contain **multiple A4 pages** (page break per sheet). Each sheet: top row = month N, bottom row = month N+1 (four A6 cards per month).
+
+Set `RANGE` in `printables/templates/monthly-calendar.js` before building:
+
+```js
+const RANGE = {
+  from: { year: 2026, month: 7 },
+  to: { year: 2027, month: 4 },
+};
+```
+
+| Block | Description |
+|---|---|
+| `printableDocument({ pages })` | Multi-page HTML (`printables/lib/document.js`) |
+| `monthlyCalendar(year, month)` | Sidebar + weekday row + date grid |
+| `monthlyCalendarStyles()` | Styles for calendar layout |
+| `monthPagePairs(fromY, fromM, toY, toM)` | Month pairs per A4 sheet |
+| `buildCalendarCells(year, month)` | 42-cell grid data |
+| `nextMonth(year, month)` | Following month (December → January next year) |
 
 ## GitHub Pages setup
 
