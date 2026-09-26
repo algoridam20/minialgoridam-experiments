@@ -19,6 +19,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 |---|---|---|
 | Daily | Multi-Step Project Tracker | `printables/templates/multi-step-tracker.js` |
 | Daily | Staged Action Tracker | `printables/templates/staged-action-tracker.js` |
+| Daily | Flow State Ritual Tracker | `printables/templates/flow-state-ritual-tracker.js` |
 | Monthly | Monthly Habit Tracker | `printables/templates/habit-tracker.js` |
 | Monthly | Spend Tracker | `printables/templates/spend-tracker.js` |
 | Monthly | Monthly Calendar (Jul 2026–Apr 2027) | `printables/templates/monthly-calendar.js` |
@@ -30,6 +31,7 @@ Hub: **https://algoridam20.github.io/minialgoridam-experiments/public/**
 
 - [Multi-Step Project Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/multi-step-tracker.html)
 - [Staged Action Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/staged-action-tracker.html)
+- [Flow State Ritual Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/flow-state-ritual-tracker.html)
 - [Monthly Habit Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/habit-tracker.html)
 - [Spend Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/spend-tracker.html)
 - [Monthly Calendar](https://algoridam20.github.io/minialgoridam-experiments/public/printables/monthly-calendar.html)
@@ -46,6 +48,7 @@ printables/
     habit-tracker.js
     multi-step-tracker.js
     staged-action-tracker.js
+    flow-state-ritual-tracker.js
     goal-tracker.js
     spend-tracker.js
     monthly-calendar.js
@@ -62,6 +65,7 @@ public/                 # GENERATED — run npm run build; committed for GitHub 
     habit-tracker.html
     multi-step-tracker.html
     staged-action-tracker.html
+    flow-state-ritual-tracker.html
     goal-tracker.html
     spend-tracker.html
     monthly-calendar.html
@@ -85,6 +89,7 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Staged action (dense) | 16 items, 2.5 mm symbols | Right column (TR + BR); symbols vertically centered |
 | Spend tracker | 30 segments, 70% width | Centered bucket; open top; dotted segment lines; 10 mm vertical margin |
 | Calendar | 6 weeks, hairline date borders | Vertical “JULY 2026” sidebar; S–S weekday row |
+| Flow state | 6×11 frame (30 border) | Kaplan hat substitution; fills width + height |
 | Progress bar | 4 mm tall, 8 segments | 12.5% per segment |
 
 ## Adding a printable
@@ -196,6 +201,20 @@ const RANGE = {
 | `monthPagePairs(fromY, fromM, toY, toM)` | Month pairs per A4 sheet |
 | `buildCalendarCells(year, month)` | 42-cell grid data |
 | `nextMonth(year, month)` | Following month (December → January next year) |
+
+### Flow state ritual tracker
+
+Blank left strip for handwritten start/end dates; device uses the remaining width (no blank on the right). Light framed ring of **square** border cells (each with an empty **diamond**). Middle: **hat (Einstein) monotiles** generated via Kaplan’s H/T/P/F substitution (non-overlapping), count matched 1:1 to border cells. Default **6×11** outer frame → **30** border / **30** hats.
+
+Tune via `flowState.outerCols` / `flowState.outerRows` in `printables/lib/tokens.js` (border count = `2×(cols+rows)−4`).
+
+| Block | Description |
+|---|---|
+| `flowStateTracker()` | Sidebar + framed border/diamond device |
+| `flowStateTrackerStyles()` | Layout styles |
+| `flowStateDeviceSvg()` | SVG border squares, diamonds, hat middle |
+| `flowStateMetrics()` | Cell size and border count from tokens |
+| `hatPolygonsForRect(n, …)` | Non-overlapping hats via substitution (`hat-tiling.js`) |
 
 ## GitHub Pages setup
 

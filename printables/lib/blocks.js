@@ -1,5 +1,6 @@
 import { tokens as t } from "./tokens.js";
 import { MONTH_NAMES, buildCalendarCells } from "./calendar.js";
+import { flowStateMetrics, flowStateDeviceSvg } from "./flow-state.js";
 
 const SLANTED_H = 12;
 const LABEL_W = 4;
@@ -780,5 +781,54 @@ export function monthlyCalendar(year, month) {
       <div class="calendar-weekdays">${weekdayRow}</div>
       <div class="calendar-grid">${grid}</div>
     </div>
+  </div>`;
+}
+
+export function flowStateTrackerStyles() {
+  const m = flowStateMetrics();
+
+  return `
+  .card-inner--flow-state {
+    left: ${m.margin};
+    right: ${m.margin};
+    top: ${m.margin};
+    bottom: ${m.margin};
+  }
+
+  .flow-state-layout {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-height: 0;
+    gap: ${m.gap};
+  }
+
+  .flow-state-sidebar {
+    width: ${m.sidebarWidth};
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  .flow-state-device {
+    flex-shrink: 0;
+    width: ${m.width}mm;
+    height: ${m.height}mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .flow-state-svg {
+    display: block;
+    width: ${m.width}mm;
+    height: ${m.height}mm;
+    overflow: visible;
+  }
+`;
+}
+
+export function flowStateTracker() {
+  return `<div class="flow-state-layout">
+    <div class="flow-state-sidebar"></div>
+    <div class="flow-state-device">${flowStateDeviceSvg()}</div>
   </div>`;
 }

@@ -29,6 +29,15 @@ export const tokens = {
     weekdayFont: "3pt",
     dateHairline: "0.5px",
   },
+  flowState: {
+    // Outer frame of unit squares. Border count = 2*(cols+rows)-4.
+    // 6×11 → 30 border cells; aspect ~fills A6 beside left date strip.
+    outerCols: 6,
+    outerRows: 11,
+    margin: "2mm",
+    sidebarWidth: "10mm",
+    gap: "1.5mm",
+  },
   dotGrid: {
     size: "3.8mm",
     dot: "0.55px",
@@ -55,6 +64,7 @@ export const tokens = {
     fieldLine: "#444",
     cutGuide: "#888",
     calendarDateBorder: "#a9a9a9",
+    flowStateLine: "#c8c8c8",
     screenBg: "#ececec",
     cardBg: "#fff",
   },
