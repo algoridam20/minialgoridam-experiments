@@ -29,6 +29,18 @@ export const tokens = {
     weekdayFont: "3pt",
     dateHairline: "0.5px",
   },
+  flowState: {
+    // Double square+diamond border + Penrose middle; ~5mm gutters on A6.
+    // 11×19 with 2 rings → 104 border cells.
+    outerCols: 11,
+    outerRows: 19,
+    borderRings: 2,
+    penroseGenerations: 4,
+    margin: "2mm",
+    sidebarWidth: "5mm",
+    sideGutter: "5mm",
+    gap: "1.5mm",
+  },
   dotGrid: {
     size: "3.8mm",
     dot: "0.55px",
@@ -55,6 +67,7 @@ export const tokens = {
     fieldLine: "#444",
     cutGuide: "#888",
     calendarDateBorder: "#a9a9a9",
+    flowStateLine: "#c8c8c8",
     screenBg: "#ececec",
     cardBg: "#fff",
   },

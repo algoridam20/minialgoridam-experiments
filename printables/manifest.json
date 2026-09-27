@@ -32,6 +32,12 @@
       "template": "staged-action-tracker.js"
     },
     {
+      "id": "flow-state-ritual-tracker",
+      "title": "Flow State Ritual Tracker",
+      "category": "daily",
+      "template": "flow-state-ritual-tracker.js"
+    },
+    {
       "id": "goal-tracker",
       "title": "Goal Tracker",
       "category": "yearly",

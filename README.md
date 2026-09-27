@@ -19,6 +19,7 @@ Open a printable, then **Ctrl/Cmd+P** to print. Use A4 paper, no scaling (100%).
 |---|---|---|
 | Daily | Multi-Step Project Tracker | `printables/templates/multi-step-tracker.js` |
 | Daily | Staged Action Tracker | `printables/templates/staged-action-tracker.js` |
+| Daily | Flow State Ritual Tracker | `printables/templates/flow-state-ritual-tracker.js` |
 | Monthly | Monthly Habit Tracker | `printables/templates/habit-tracker.js` |
 | Monthly | Spend Tracker | `printables/templates/spend-tracker.js` |
 | Monthly | Monthly Calendar (Jul 2026–Apr 2027) | `printables/templates/monthly-calendar.js` |
@@ -30,6 +31,7 @@ Hub: **https://algoridam20.github.io/minialgoridam-experiments/public/**
 
 - [Multi-Step Project Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/multi-step-tracker.html)
 - [Staged Action Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/staged-action-tracker.html)
+- [Flow State Ritual Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/flow-state-ritual-tracker.html)
 - [Monthly Habit Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/habit-tracker.html)
 - [Spend Tracker](https://algoridam20.github.io/minialgoridam-experiments/public/printables/spend-tracker.html)
 - [Monthly Calendar](https://algoridam20.github.io/minialgoridam-experiments/public/printables/monthly-calendar.html)
@@ -46,6 +48,7 @@ printables/
     habit-tracker.js
     multi-step-tracker.js
     staged-action-tracker.js
+    flow-state-ritual-tracker.js
     goal-tracker.js
     spend-tracker.js
     monthly-calendar.js
@@ -62,6 +65,7 @@ public/                 # GENERATED — run npm run build; committed for GitHub 
     habit-tracker.html
     multi-step-tracker.html
     staged-action-tracker.html
+    flow-state-ritual-tracker.html
     goal-tracker.html
     spend-tracker.html
     monthly-calendar.html
@@ -85,6 +89,7 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Staged action (dense) | 16 items, 2.5 mm symbols | Right column (TR + BR); symbols vertically centered |
 | Spend tracker | 30 segments, 70% width | Centered bucket; open top; dotted segment lines; 10 mm vertical margin |
 | Calendar | 6 weeks, hairline date borders | Vertical “JULY 2026” sidebar; S–S weekday row |
+| Flow state | 11×19 double border (~104 cells) | Penrose P3 rhombs in middle; ~5mm gutters |
 | Progress bar | 4 mm tall, 8 segments | 12.5% per segment |
 
 ## Adding a printable
@@ -196,6 +201,20 @@ const RANGE = {
 | `monthPagePairs(fromY, fromM, toY, toM)` | Month pairs per A4 sheet |
 | `buildCalendarCells(year, month)` | 42-cell grid data |
 | `nextMonth(year, month)` | Following month (December → January next year) |
+
+### Flow state ritual tracker
+
+Blank left strip for handwritten start/end dates; device centered with equal gutters. **Two concentric** rings of square border cells (each with an empty diamond). Middle: **Penrose P3** thick/thin rhombs (Robinson-triangle subdivision). Default **11×19** with 2 rings → **104** border cells; ~5mm spacing on all sides.
+
+Tune via `flowState.*` in `printables/lib/tokens.js`.
+
+| Block | Description |
+|---|---|
+| `flowStateTracker()` | Sidebar + framed border/diamond + Penrose device |
+| `flowStateTrackerStyles()` | Layout styles |
+| `flowStateDeviceSvg()` | SVG double border + Penrose middle |
+| `flowStateMetrics()` | Cell size and border count from tokens |
+| `penroseRhombsForRect(…)` | Penrose P3 patch fitted to a rect (`penrose-tiling.js`) |
 
 ## GitHub Pages setup
 

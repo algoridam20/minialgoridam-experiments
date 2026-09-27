@@ -1,5 +1,8 @@
 import { tokens as t } from "./tokens.js";
 import { MONTH_NAMES, buildCalendarCells } from "./calendar.js";
+import { flowStateMetrics, flowStateTrackerStyles, flowStateTracker } from "./flow-state.js";
+
+export { flowStateTrackerStyles, flowStateTracker };
 
 const SLANTED_H = 12;
 const LABEL_W = 4;
@@ -782,3 +785,4 @@ export function monthlyCalendar(year, month) {
     </div>
   </div>`;
 }
+
