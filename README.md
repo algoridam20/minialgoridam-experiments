@@ -89,7 +89,7 @@ All dimensions and colors live in `printables/lib/tokens.js`:
 | Staged action (dense) | 16 items, 2.5 mm symbols | Right column (TR + BR); symbols vertically centered |
 | Spend tracker | 30 segments, 70% width | Centered bucket; open top; dotted segment lines; 10 mm vertical margin |
 | Calendar | 6 weeks, hairline date borders | Vertical “JULY 2026” sidebar; S–S weekday row |
-| Flow state | 6×11 frame (30 border) | Kaplan hat substitution; fills width + height |
+| Flow state | 11×19 double border (~104 cells) | Penrose P3 rhombs in middle; ~5mm gutters |
 | Progress bar | 4 mm tall, 8 segments | 12.5% per segment |
 
 ## Adding a printable
@@ -204,17 +204,17 @@ const RANGE = {
 
 ### Flow state ritual tracker
 
-Blank left strip for handwritten start/end dates; device uses the remaining width (no blank on the right). Light framed ring of **square** border cells (each with an empty **diamond**). Middle: **hat (Einstein) monotiles** generated via Kaplan’s H/T/P/F substitution (non-overlapping), count matched 1:1 to border cells. Default **6×11** outer frame → **30** border / **30** hats.
+Blank left strip for handwritten start/end dates; device centered with equal gutters. **Two concentric** rings of square border cells (each with an empty diamond). Middle: **Penrose P3** thick/thin rhombs (Robinson-triangle subdivision). Default **11×19** with 2 rings → **104** border cells; ~5mm spacing on all sides.
 
-Tune via `flowState.outerCols` / `flowState.outerRows` in `printables/lib/tokens.js` (border count = `2×(cols+rows)−4`).
+Tune via `flowState.*` in `printables/lib/tokens.js`.
 
 | Block | Description |
 |---|---|
-| `flowStateTracker()` | Sidebar + framed border/diamond device |
+| `flowStateTracker()` | Sidebar + framed border/diamond + Penrose device |
 | `flowStateTrackerStyles()` | Layout styles |
-| `flowStateDeviceSvg()` | SVG border squares, diamonds, hat middle |
+| `flowStateDeviceSvg()` | SVG double border + Penrose middle |
 | `flowStateMetrics()` | Cell size and border count from tokens |
-| `hatPolygonsForRect(n, …)` | Non-overlapping hats via substitution (`hat-tiling.js`) |
+| `penroseRhombsForRect(…)` | Penrose P3 patch fitted to a rect (`penrose-tiling.js`) |
 
 ## GitHub Pages setup
 

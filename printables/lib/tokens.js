@@ -30,12 +30,15 @@ export const tokens = {
     dateHairline: "0.5px",
   },
   flowState: {
-    // Outer frame of unit squares. Border count = 2*(cols+rows)-4.
-    // 6×11 → 30 border cells; aspect ~fills A6 beside left date strip.
-    outerCols: 6,
-    outerRows: 11,
+    // Double square+diamond border + Penrose middle; ~5mm gutters on A6.
+    // 11×19 with 2 rings → 104 border cells.
+    outerCols: 11,
+    outerRows: 19,
+    borderRings: 2,
+    penroseGenerations: 4,
     margin: "2mm",
-    sidebarWidth: "10mm",
+    sidebarWidth: "5mm",
+    sideGutter: "5mm",
     gap: "1.5mm",
   },
   dotGrid: {

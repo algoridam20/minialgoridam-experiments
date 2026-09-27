@@ -15,6 +15,8 @@ const CATEGORY_LABELS = {
   yearly: "Yearly",
 };
 
+const CATEGORY_ORDER = ["daily", "monthly", "yearly"];
+
 function toTitleCase(value) {
   return value.replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
@@ -36,9 +38,14 @@ function renderHub(manifest, built) {
     byCategory.get(entry.category).push(entry);
   }
 
-  const sections = [...byCategory.entries()]
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([category, items]) => {
+  const categories = [
+    ...CATEGORY_ORDER.filter((c) => byCategory.has(c)),
+    ...[...byCategory.keys()].filter((c) => !CATEGORY_ORDER.includes(c)).sort(),
+  ];
+
+  const sections = categories
+    .map((category) => {
+      const items = byCategory.get(category);
       const links = items
         .map((item) => `<li><a href="./printables/${item.id}.html">${item.title}</a></li>`)
         .join("\n");
